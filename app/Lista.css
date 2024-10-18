@@ -1,0 +1,221 @@
+body{
+    height: 100vh;
+    padding: 0.5rem 1rem;
+    background-color: black;
+}
+
+#contact-form {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border-width: 3px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+/*El siguiente ¨Background¨, es el de el formulario para agregar contactos, en prueba*/
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8QDw8PDxAPDw8PDw0ODw8PDw8PEBAPFRUWFhUVFRYYHSggGBolHRUVITEhJSkrLi4uFyAzODMsNygtLisBCgoKDg0OGBAQFy0fHx0tLS0tLS0rLS0tLS0tLS0tKy0uLS0tLSstLS0uLS0tLS0tLS0tLS0wKy0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAACAwABBAYFBwj/xABGEAACAQIDBQMIBgcHBAMAAAABAgADEQQhMQUSQVFhE3GBBiIycpGhsdEzUlOTwfAWI0JUlNPhFENigpLC8RVjorIHJHP/xAAbAQACAwEBAQAAAAAAAAAAAAAAAQIDBAUGB//EAC8RAAICAQMCBAQFBQAAAAAAAAABAhEDEiExBFEFE0FhFSJxkTJSobHhFEJigdH/2gAMAwEAAhEDEQA/APkwWGEhKIYEpbOzGAASEFhAQgJGy1YwJLGNtJaLUS8sSVmesttNdRNjCIrDKTiynLj2OgpPvAMNGAYdxzjlnn7Iqb1JRxQlD4ae4iegs5uRVJo9Jgn5mOMu6DEsShCErL0ghHUnKkFTYjiIoQxIMdHu4HHh7K3mt7j3fKegJyonpYHaRWyvmODcR385TLH2M+TB6xPagVJaOCAQQQdCJTykynibYpbysOYM9TY+J7ShSa9zuBW9ZfNb3gzJjluDMnk3X3WrUDwPap3HJh7bH/NNFasb9gnymdIDLBiQ0LemcQ3elC5NhmToIC3JsMyeH54T0MPSCDmx1P54RpEJz0mrYZNOpuE37VfDfXOw8C3snvEzmKjEWZfSUhl7xnY9Dp4zosPXFRFddGAI5joesti7Rzsq3vuMJiqin0hqPYRyMOUYysBKt+hGoOolkxdWnfPRhoR+cxFmsV9MW/xDNfHivjl1gSoaTBJkDAi4NwdCM4JiApjFkwjAMRIqSSSAz89rCEUjxgM77RXGSGCEIsGEGkGi9MZJA3pN+JRbG5xXLLaJqaQyYLLL4YZv0MGfrsMVSd/QZsWtu1GQ6OLj1l/pf2T3lnKuSpDLqpBHeJ02Hqh1VxowB/pMvW4tLUu50/BOrWWEsfrHdfR/yPliDLEwM7yGiEDFgwgZFjGgy4AMsGIZqwuLamcsxxU6H5GezQxS1BdTnxB1E528JKhU3BsRxEhKCZVkxKW/qe3iBlOexVU0K1OsNFNnHOmcm92fgJ6tHHBsmybnwMybSo7wMeL5XTMmTG6aOgVwcxmNQeYhpdjYZn3DqZ4HkxiS6nDn06Wl+NLgfDT2c51VBAosNeJ4mQnj0yozPJttyPoUwg5k6nnGb0Tvyw0gUsbeatj4rcc0j6NQlqfR9WXx17785h3oFUXFsxoQRqCMwRyIMcXTIyjao6u8EmYNlbQ7VSr2FVPTA0YcHHQ+45cr7SZNmWqITBMhMomIBDYdb3A3SdSpKk99tYBpuNKjH1lQ/ACPJgkwJCCKn118EPzgmk3F37hur7wL++OMEmKxif7OvK/Ukk+0yRl5IWM/PUsCVLnsKR5bVJcMsQhBEsQ0x7A8s/zP7hiXBEsSRW23yFKMl5CYCFVBNWxMVusaTaNcp0biPx9szMZnqrxGRFiDyI4yjPjWSLizb0PUy6fKsi9P2OuEuYtl40VUubB1ycdeY6GbZwJxcW0/Q+g4cscsFODtMsGEDAkkC2xu9JvRd5LwoLG78m9FXkvCgsYWjFxVhZj5oGp4CZiwAuTYDMmeTjcXv5DJPe3UycMWtmfqM0YR35LqbYaliUr0RlTOY07RDkwPIEaeBn0rBY1K1NKtM7yOAyn8DyI0t0nyd1nr+SW2/wCz1OwqG1Go3msdKdQ/7T7jnzmjPgU4XHlHB8xwyXLiR9I34QeZQ8sPOXRro1B5N6Z+0k7SFBQ0swIdDuuuatr3gjiDxE93Zu01rAgjcqqPPp34fWU8V6+2c4Xi6moIJVlN1dTZlPMGSXZlc8eo7QmCTPBwO3wPMxNkOgrDKm3rfUPu6jSe1vRNUZ3FrkImCTBJmDaO1aVAecbsdEXNj8hHCEpuoq2RlKMFcnSNxMy4rHUqfp1FU8ic/ZrOS2h5QVqlwD2a8kOfi2vwnjVK06eLwxvebr6HOy+JJbQV/U7Y+UeG+sx6hGknBmrJNPw3D7/f+DN8Sze32/k40QosE9JYJ6Tp2ZKDhRefOXaFkWg7yb0ES4Cou8uDeS8BFmAwhSjBjQqjWak4dNRkRwYcQZ0+ExS1UDrodRxB4gzmXWFhqz0W3l4+kvBh8+sw9T03mK1ydvwvxN9NLTPeL/T3OqvKJmfC4tKq7ynvB1U8jDZpyHFp0z2UJxnFSi7TDLwS8XeSSoGxm/KNS2ZyHExZIGZyA4zzcVid/IZKPf1MnDHqKM3URxr3GYvFlzYZIPf1MQIAhCaVFJUjlSm5O2WZnrU7iaIJElF0V5IKSo6DyV8obbuGrtmLLRqE68kY8+R8OV+tFSfKq1K86HYHlKVtRxLZZBKx9wc/7vbzmbqOm1fPD/aK8Oby3onx6M7XtJO0mUVJO0mCjeau0lGpMnaSdpDSBoZpWFxdWj9C+6v2bDfpH/L+z/lI8ZnNSZMXi93Ian3CXYsUpy0x9SnPkhjg5T4R7mJ8qn3CophKum8G30A5i4GfQ++c7WxBYlmJJJuSTckzG1WLarO7h6eGJVFHlM+eWaVvj0RoerEPUiWqRTVJeZxxqSTJ2kuOhHhCWIMu8ZaFeXBvLvAC5cG8u8LFRckqSOwouSVCpJvG3tiDgZQpXzPhLq0prVcpTLHRXZ5Y3kbeQ7rD3jkRxE9XB7SV7K3mPy4N3H8PjM9SlMdajM2bBHJzydLofEsvTP5Xa7eh0LGLapbM5ATxKW0Hp5Hz15E+cB0Pzh1ccKhsMh9U5G8576WUXvwekh4thyQtbS7MfiMSXNtFGnXqYqAIUtSS2RllNylqYQlgwZIElIZeVBvLvETsoxNWnePlSSdFWSCkh+ydt1cPZGvUo/Vv5yD/AAn8D7p1uD2jTrLvU2DDiNGU8iOE4d0iV3kYOjFGGhU2P/HSV5MEMm/DKoZZ4duUfRN+V2k5TBeUrCy113v+4gsfFdPZ7J7eFx9Kr9G6txsDZh3qcxMc8E4co2Y+pxz4e/Y21q4UEnhPHqViSSdTC2jXzC8sz3zEXnU6LDohqfLOD4p1GvLoXEf3HtUi2qRReLLzacsazxbPFloJaMQW9JFb0kYG0eRm0/3U/f4X+ZCHkXtP91P8RhP5k+krTqD0a1Ud+4//ALKY1auIH7VNxyZCpPipt7pB2LzT5l+hW1P3U/xGE/mQv0J2p+6n+Iwn8yfUF2ky/SUnHNqZFVR4ZN7AZsw2Mp1L7jhiNRezL3g5jxitj8w+R/oRtT90P8RhP5kv9B9q/uh/iMH/ADJ9lDQg0Wpj1nxn9Btq/uh/iMH/ADINTyK2oou2FIGn0+EPwqT7WGmfaLeYPWHwMWpj1nxVvJTaI1wreFXDt8HhrsLF0x52Gr9SKTsPaoM+rq0YGklJkXKz47UDJk6sh5OpX4yt+fZDY5HMcjmJ5uL8n8FVvv4ekCdWpjsmv3pYmPWI+WGZMVUAy4zv9o+RFI3GHrPTbXdqAVEHiLEe+cVtfycxeGP6xA4Oe/SbtB7MmHiBByJwS9WeMwvAanGA3lyJeLVmGhPccxGrijxX2SWk3JFwT9C2GeceGMGKXjceHyhjEJz9xiOzEIUxIeTEvXXZF2HdunP4yCuvP3GAKYhbgi8hEviE+yDWqp0I9ohwaWFDcMo1sFb0SR8PZE+n7MlHxNXUo/YXFsITK66i45j5Re9eVuEo8mqGfHl/CwGEU9PjoRncRxj9mUt/EYdOD16CHuLgGF0RnBM79/IgilTtUbtezp9oWO9d90b2vW88fFeTOLTRVcdDafVHiXUTkw6/NF8l8ujwzXzRPj1bA109Kk48LzKwYaqw71In2Oph1OoEy1NnUjqi+wTVHxWXrEzy8KxPiTR8jLRZqDmPbPrDbFoE/Rr7BOTqbNpbzeaNTw6y2Piif9pGPgurif6HI9oOcqdd/wBPp/VX2S5L4mvylnwH/M6ddonjQrD7o/B45dqUv2i6evTdR7bW98ghATpnlrNNCuji6MrjmrBh7pVbDI9t5RcaMMmU8wwzB7piq4Gkx3ioDcHXzXHcwzEgSvT+jqdoPqVs/AOMx3neioZuSrWpaHt0+q1hVA6No3cfbN+ExiVAShzGTKcmU8mB0nk0NoqSEcGlUOQV7WY/4W0bu16R1agGIdSUqLfdddR0PMdDlItEkz2Q0z7SbzB6w+BmbB40sdyoAtQAnL0XH1l/EcOusPaTeYPWHwMVEjIrRgaZlaFvwEaQ0VUrm+6uvE8F/r0/JzNWJNlOXFuXQdfz3YcftAUhuJm/tt1PWNRsG6NWO2gtEbq5uc7a+LfnOeE1VmYsxJJzvM++SSSbk5knjDBl8YpFMnZl2hsihXuWXdc/3iWVievBvGcttLY9Whdj+sp/aKNPWH7Pw6ztC0gaJxTLIZZR9z52DCE6Ta2wFa9TDgK+ppZBG9X6p6ad3HmjcEggggkEEWII1BHAypqjXGSkrQYhCADCvESCjqFLezOnxg0Kd8zp8ZsWSSK5y7DUAEuLBl70mVFsJmrYVTnoeYmjegkwoabW6PNqUWXqOY1mnYDf/cwtrX/tNDXnvjWOaJpMKdajVNh2dalUJ6K4Y/CZ8mFNOjbh6yeylufanxe79IpT/Ffep/6uHiBGb4OYjHMwvhbEmkdw6lbXpnvXh3i08rSPSo0FoBaZlxGe643H5ag+qePx6Qy8KomkM3px1VvOb1j8Z1e9OPqt5zes3xk4mjBywt6SK3pJM0HThoYaIBhgz1R8yNAaEDEAwwYAFWpK4KsAwOoIuJmWq9D0i1SjzN2qU/xZfeOs0gyzEMZVVaigg8mR1IuDwZTKr4ktTs1g6uocDQ5GzDofmOExUG7Fwv8AdVD5v/bqHh3H498fjgLBuN7eGcVErADRRqlsgbLxbn0Hzmdqm9kD5o9I8+gnnbQ2lb9XTNrZFhw6CNRsbdGraG0gg7Ona+hI0X+s8e99cydTEqY1ZcopFTdjQYQMUDLLRiDLSBoq8u8Qxu9PN2xsta43lstYDzW4OOCt+B4d2m3ejcKt26DOKXBOLado4FlZWKsCrKSrKRYgjUGNopfM6fGdd5R7FFYdtTH65ALgf3qDh6w4c9OVuTRpUkatdrY0qYV4kNCDSZWNvLvF3l3gFB3lEwLyiYBQRMz4gXB7jGkxbreFDWx9g2Bju3wmHq3uXpJveuBut7wZtYzif/jfaF6dbCnWk3ap1R/SA7mF/wDPOxLTynU4vLyyj7nremyeZijIGsisLMLj8ecyFihsxupyV+I6N8/ydRaKexBBzByIlSNAIachVbzm9ZvjOnXzTunMfsn8DOTrN5zes3xlkEXYXuwt6SK3pUnRos6QY6h9tS+8T5wxj6H21H71PnPktpLT01nzzyF3Pro2hQ+2o/ep84Q2hQ+2o/ep858gtLtFYeQu59gG0KH21H71PnL/AOoUPtqP3qfOfHbSGFj8hdz69iMZh3VlNajYi30qfOZK21aboqdrT3h9IQ66i4yz469xnzbA4A1MzknPi3d857lKiq2sALadJOMWyqajD3Pax2Pv5lPJdCRx6CYVi1MYDLUqKbsYsMGK3pe9ABt4JaAWkvAA7yXi7yXiGM3p6GFTdXqczMGFS7X4D4z0VMi9x8IbvTk/KfZ3Zv26DzKjeeAMlqHO/c3xvzE6i8XiKS1Eam+auCp5946g2PhBocJaWcEphgwK9FqbvTb0kJU8jyPcRY+MgMimaGhgMu8WDLBjEHeWJSiMAjSE3RQWWVhqsMJJ0V2DsvHNhcRTri5CkrUUftU2yYfiOoE+ortGgQCK1KxAIPaJmD4z5Ti7KM+Ogg7KxWfZNxuUPxX5TleIdKp/OuUdvwrqKfly4fH1Pq5x9H7al94nzgHHUftqX3ifOfP5U5Hkruei0Pud8+LoHLtqX3ifOcdVqrvN5w9JuI5zDKJlkcaQ4/KbO2X6w9okmG8kloRPWzwZJUk7p4ouS8q8qAFkzbg8HezPpwXn3/KDhqFs2zPAcB/WbFeWRj3KZ5PRGtWjA0yq8YrS2yho0hoYeZg0MNCyFGgNL34gNLBgIeGl70RvS96Ax15BckAan83id7/ib8LS3Rc6nX5SLY0rNFFQoAEbeLBl3iSB7h3kvAvKvGI8HyrwvoVx/wDm/wAVPxHsngqZ2uNodrSemf2lIHRtVPtAnDoTx14jrIPk043ca7DRGqICCNUSSQSYSiMVZSiOVZMqZarAxFcIOZ4CDicSEHNuA/EzzHck3JuTISlXBZDHe7LqOWNzrEVB7dYZMqUmhbHqbPx++N18qg/8xzHXpNhac2w4jIjMEZEGehhNpX82obHg+gPfy79JgzdNT1RO70fiCaUMj37/APT0i0G8qSZqOpZLySpcKFqPDkvKvIoJ09s7B5AsZ5CaaNMDqecFFAhgyaRXJt8DgYYMQGjAZOypocrRivEAwgYyFGkNDDTMrRitARoDQw0QGhBoWFDry7xQNzYZnl+dJsw9G2ZzPuHdBsWkZhqNvOOvDpNamKUxkQNh3kvAvJeMgHeVeDeVeABXnI7Uo7mIqjgW3x3MLn3kjwnV3ngeUSfrKbfWQr/pN/8AdEy3E9zAkcoiqcegjQ5DEEVisUEyGbfCBisVu+avpfD+s88mRlL0ROGO92WzE5nMmDeVLlReSSSVAZRgMkZJAZVDEvT0N1+qcx4cpvo7SRsmuh65j2/OeeRBKSqeGMuTVh6vLi2T27M9wVVOhB7iJJ4HZySn+lXc1fE5fl/Uaov3RymSSbUchhAwgZJIyJcsDllJJJEWEKhGov3RiVAdJJIr3E1tYwGGDKkkyph79hc6R1JS3Qc9TJJEP0N1FAun9T3x6m+Q4anlJJAi2OXKXeXJGVlXkvJJACryXkkgBV55HlF6NI8nYe0f0lyRPgnj/EjzKcDEYm3mrrxPKSSKTpF0Ypy3MV5V5JJUaS5JJIAS8qSSAFySSQAqQySQAqVJJAD/2Q==);
+    
+}
+
+.contact-form-input{
+    text-align: center;
+    
+}
+
+.contact-form-input-container { 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form-label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.contact-form-input{
+    border-radius: 0.375rem;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: light-dark(var(--light-border-card-color),var(--dark-border-card-color));
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: light-dark(var(--dark-text-color),var(--dark-text-color));
+    background-color: transparent;
+}
+
+.contact-form-error-text{
+    font-size: 0.75rem;
+    display: none;
+}
+
+.contact-form-input{
+    font-weight: 700;
+    font-size: 1.5rem;
+/*La seccion de arriba sigue en prueba*/
+}
+
+.contact-form-input:focus{
+    outline: 2px solid light-dark(var(--dark-text-color),var(--light-text-color));;
+}
+
+#contact-form-btn{
+padding: 0.5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 0.375rem;
+ background-color: transparent;
+ border: 2px solid white;
+ color: white;
+    outline: 2px solid light-dark(var(--dark-text-color),var(--light-text-color));;
+    font-size: 1.5rem;
+    cursor: pointer; /*Cursor del mouse, para icono de mano*/
+    
+}
+
+#contact-form-btn:hover{
+    background-color: red;
+    transition: all 0.2s ease-in-out;
+}
+
+#main-container{
+    height: 100vh;
+}
+
+.titulo-agregar{
+    text-align: center;
+    
+}
+
+/*Titulo de lista de contactos*/
+#title-list-contac{
+    text-align: center;
+   padding: 3%;
+    font-size: 4rem;   
+}
+/*El siguiente es la caja div de los h3 debajo de titulo de contactos*/
+#text-title-h3{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    text-align: center;
+    
+    
+   
+}
+/*Titulos de los h3*/
+.text-title-h3-T{
+   margin: 0;
+   border-width: 2px;
+   border-radius: 2rem;
+   padding: 0.359rem;
+  
+    
+}
+/*Titulo de total, h3*/
+#Title-total{
+    background-color: green;
+    /*Cursor que indica menu*/
+    cursor: context-menu;
+}
+
+/*Efecto de pasar el cursor por el total*/
+#Title-total:hover{
+    background-color: rgb(0, 53, 0);
+    transition: all 0.2s ease-in-out;
+}
+/*Titulo de Incompleto, h3*/
+#Title-Incompleto{
+    background-color: red;
+     /*Cursor que indica menu*/
+     cursor: context-menu;
+}
+
+/*Efecto de pasar el cursor por el Incompleto*/
+#Title-Incompleto:hover{
+    background-color: rgb(68, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+/*Titulo de Completo, h3*/
+#Title-completo{
+    background-color: rgb(65, 0, 65);
+     /*Cursor que indica menu*/
+     cursor: context-menu;
+}
+/*Efecto de pasar el cursor por el completo*/
+#Title-completo:hover{
+    background-color: rgb(158, 0, 158);
+    transition: all 0.2s ease-in-out;
+}
+
+/*los siguientes atributos despues del height, estan a prueba, igual que antes eran 30 pixeles */
+#contact-list{
+    
+    padding: 2rem;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 2rem;
+    background-color:rgba(110, 16, 16, 0.733);
+    color:white;
+    margin: 5%;
+    /*Los siguientes atributos permiten la barra de bajar y subir
+    el cual el height 110vh agarra toda la pantalla y como el texto se desborda, utilice overflow*/
+    height: 110vh;
+    overflow: auto;
+    
+}
+.contact-list-input{
+    background-color: rgb(167, 151, 151);
+    font-size: 16px;
+}
+.contact-list-inpusts-container{
+    /*el siguiente es el espacio entre nombre de contacto y numero*/
+    display: flex;
+    flex-direction: column-reverse;
+    border-width: 1px;
+    border-style: solid;
+   
+    
+   
+}
+.contact-li-btns-container{
+   margin: 9px;
+  text-align: center;
+ padding: 3px;
+  
+    /*Caja donde estan los botones*/
+}
+.contact-li-delete-btn{
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    cursor: pointer;
+}
+.contact-li-delete-btn:hover{
+    background-color: rgb(129, 1, 1);
+    transition: all 0.2s ease-in-out;
+}
+.contact-li-edit-btn{
+    width: 2rem;
+    height: 2rem;
+    background-color: green;
+    cursor: pointer;
+}
+.contact-li-edit-btn:hover{
+    background-color: rgb(1, 66, 1);
+    transition: all 0.2s ease-in-out;   
+}
+/*Texto de creditos del fin de la pag*/
+#title-fin-pag{
+    text-align: center;
+}
+/*Link de regreso a inico*/ /* falta revisar
+#link-back-inicio{
+    display: flex;
+    flex-direction: column;
+}*/
